@@ -8,9 +8,11 @@ var server = http.createServer(function(req, res) {
     //res.end('Hell Work<br>'+req.url);
     if (req.url=='/test') {
         res.end(fs.readFileSync('test/test.html', 'utf8'));
-    }else {
-        res.end(fs.readFileSync('web/index.html', 'utf8'));
-    }
+    }else if (req.url=='/') {
+
+        fs.createReadStream(__dirname + '/web/index.html').pipe(res);
+
+    }else res.end(fs.readFileSync('errors/404.html', 'utf8'));
 });
 
 server.listen(8000, '127.0.0.1');
