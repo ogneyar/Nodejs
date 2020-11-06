@@ -33,7 +33,7 @@ app.get('/testy', function(req, res){
 app.listen(8000, () => console.log('Starting my server on NodeJS: http://127.0.0.1:8000'));
 */
 
-var express = require('express')
+const express = require('express')
 express()
   .use(express.static('public'))
   .set('views', 'views')
