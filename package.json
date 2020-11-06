@@ -4,6 +4,9 @@
     "express": "^4.17.1"
   },
   "name": "test",
+  "engines": {
+    "node": "12.x"
+  },
   "description": "testing nodejs server and express and ejs",
   "version": "1.0.0",
   "main": "index.js",
