@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require('express'),
 	port = process.env.PORT || 8000,
 	app = express();
@@ -9,7 +11,7 @@ app.get('/', function(req, res){
     res.render('home');
 });
 app.get('/test', function(req, res){
-    res.render('test', {test: 'test text'});
+    res.render('test', {test: process.env.TEST});
 });
 app.get('/test/:id', function(req, res){
     res.send('ID = ' + req.params.id);
