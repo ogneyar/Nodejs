@@ -6,7 +6,7 @@ var server = http.createServer(function(req, res) {
     //var data = fs.readFileSync('web/index.html', 'utf8');
     res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
     //res.end('Hell Work<br>'+req.url);
-    if (req.url=='/test') {
+    if (req.url=='/test/') {
         res.end(fs.readFileSync('test/test.html', 'utf8'));
     }else if (req.url=='/') {
 
