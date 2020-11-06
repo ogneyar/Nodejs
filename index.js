@@ -10,7 +10,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/test', function(req, res){
-    res.render('testEJS', {test: 'test text'});
+    res.render('test', {test: 'test text'});
 });
 
 app.get('/test/:id', function(req, res){

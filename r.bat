@@ -1,1 +1,1 @@
-node js/server
+node index
