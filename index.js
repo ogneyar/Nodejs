@@ -21,5 +21,5 @@ app.get('/testy', function(req, res){
     res.sendFile(__dirname + '/web/index.html');
 });
 
-app.listen(5000);
-console.log('Starting my server on NodeJS: http://127.0.0.1:5000');
+app.listen(8000);
+console.log('Starting my server on NodeJS: http://127.0.0.1:8000');
