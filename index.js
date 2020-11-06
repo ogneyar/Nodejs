@@ -1,16 +1,3 @@
-/*
-const express = require('express')
-const PORT = process.env.PORT || 8000
-
-express()
-  .use(express.static('public'))
-  .set('views', 'views')
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('home'))
-  .get('/test', (req, res) => res.render('test', {test: 'test text'}))
-  .listen(PORT, () => console.log('Starting my server on NodeJS: http://127.0.0.1:8000'))
-*/
-
 var express = require('express'),
 	port = process.env.PORT || 8000,
 	app = express();
@@ -33,4 +20,16 @@ app.get('/testy', function(req, res){
 
 app.listen(port, () => console.log(`Starting my server on NodeJS: Listening on ${ port }`));
 
+/*
+const express = require('express')
+const PORT = process.env.PORT || 8000
+
+express()
+  .use(express.static('public'))
+  .set('views', 'views')
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('home'))
+  .get('/test', (req, res) => res.render('test', {test: 'test text'}))
+  .listen(PORT, () => console.log('Starting my server on NodeJS: http://127.0.0.1:8000'))
+*/
 
