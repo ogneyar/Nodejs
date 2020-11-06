@@ -1,14 +1,3 @@
-
-const express = require('express')
-
-express()
-  .use(express.static('public'))
-  .set('views', 'views')
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('home'))
-  .get('/test', (req, res) => res.render('test', {test: 'test text'}))
-  .listen(8000, () => console.log('Starting my server on NodeJS: http://127.0.0.1:8000'))
-
 /*
 const express = require('express')
 const PORT = process.env.PORT || 8000
@@ -19,13 +8,14 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('home'))
   .get('/test', (req, res) => res.render('test', {test: 'test text'}))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+  .listen(PORT, () => console.log('Starting my server on NodeJS: http://127.0.0.1:8000'))
 */
-/*
-var express = require('express');
-var app = express();
 
-app.use('/public', express.static('public'));
+var express = require('express'),
+	port = process.env.PORT || 8000,
+	app = express();
+
+app.use(express.static('public'));
 app.set('views', 'views');
 app.set('view engine', 'ejs');
 app.get('/', function(req, res){
@@ -38,9 +28,9 @@ app.get('/test/:id', function(req, res){
     res.send('ID = ' + req.params.id);
 });
 app.get('/testy', function(req, res){
-    res.sendFile(__dirname + '/web/index.html');
+    res.sendFile(__dirname + '/js/web/index.html');
 });
 
-app.listen(8000, () => console.log('Starting my server on NodeJS: http://127.0.0.1:8000'));
-*/
+app.listen(port, () => console.log(`Starting my server on NodeJS: Listening on ${ port }`));
+
 
