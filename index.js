@@ -1,3 +1,4 @@
+/*
 const express = require('express')
 express()
   .use(express.static('public'))
@@ -6,8 +7,8 @@ express()
   .get('/', (req, res) => res.render('home'))
   .get('/test', (req, res) => res.render('test', {test: 'test text'}))
   .listen(8000, () => console.log('Starting my server on NodeJS: http://127.0.0.1:8000'))
+*/
 
-/*
 const express = require('express')
 const PORT = process.env.PORT || 8000
 
@@ -18,7 +19,7 @@ express()
   .get('/', (req, res) => res.render('home'))
   .get('/test', (req, res) => res.render('test', {test: 'test text'}))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-*/
+
 /*
 var express = require('express');
 var app = express();
