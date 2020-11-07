@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA,IAAA,CACI,UAAA,CAAA,OAAmB,CAAA,AAEvB,EAAA,CACI,SAAA,CAAA,GAAc,CAAA","file":"style.min.css","sourcesContent":["body {\r\n    background: #d4d3d3;\r\n}\r\nh1 {\r\n    font-size: 5em;\r\n}"]}
