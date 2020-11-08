@@ -2,7 +2,8 @@ require('dotenv').config();
 
 var express = require('express'),
 	port = process.env.PORT || 8000,
-	app = express();
+	app = express(),
+	reload = require('reload');
 
 app.use(express.static('public'));
 app.set('views', 'views');
@@ -20,7 +21,16 @@ app.get('/testy', function(req, res){
     res.sendFile(__dirname + '/js/web/index.html');
 });
 
-app.listen(port, () => console.log(`Starting my server on NodeJS: Listening on ${ port }`));
+reload(app).then(function (reloadReturned) {
+	// reloadReturned is documented in the returns API in the README
+ 
+	app.listen(port, () => console.log(`Starting my server on NodeJS: Listening on ${ port }`));
+  
+}).catch(function (err) {
+	console.error('Reload could not start, could not start server/sample app', err);
+});
+
+
 
 /*
 const express = require('express')
