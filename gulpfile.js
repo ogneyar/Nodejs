@@ -7,7 +7,7 @@ var nodemon = require('gulp-nodemon');
 
 
 function sass_converter(cb) {        
-    gulp.src('./scss/style.scss')
+    gulp.src('./scss/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             errorLogToConsole: true

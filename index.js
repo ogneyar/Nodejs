@@ -22,6 +22,11 @@ app.get('/test/:id', function(req, res){
 app.get('/testy', function(req, res){
     res.sendFile(__dirname + '/js/web/index.html');
 });
+app.get('/hello', function(req, res){
+    res.sendFile(__dirname + '/views/hello.html');
+	//res.render('hello');
+});
+
 var server = http.createServer(app);
 reload(app).then(function () {	
 	server.listen(port, () => console.log(`Starting my server on NodeJS: Listening on ${ port }`));
