@@ -23,8 +23,8 @@ app.get('/testy', function(req, res){
     res.sendFile(__dirname + '/js/web/index.html');
 });
 app.get('/hello', function(req, res){
-    res.sendFile(__dirname + '/views/hello.html');
-	//res.render('hello');
+    //res.sendFile(__dirname + '/views/hello.html');
+	res.render('hello');
 });
 
 var server = http.createServer(app);
