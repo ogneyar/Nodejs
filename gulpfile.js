@@ -14,7 +14,7 @@ function sass_converter(cb) {
         }))
         .on('error', console.error.bind(console))
         .pipe(autoprefixer({
-            overrideBrowserslist: ['last 2 versions'],
+            overrideBrowserslist: ['last 5 versions'],
             casdcade: false
         }))
         .pipe(gulp.dest('./public/css/'))
@@ -42,6 +42,7 @@ function nodeM(done) {
 }
 
 gulp.task('default', gulp.parallel(nodeM, watchSass));
+
 
 /*
 function defaultTask(cb) {    

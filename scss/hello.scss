@@ -7,4 +7,22 @@
   margin-bottom: 40px;
   user-select: none;
   overflow-x: auto;
+
+  span {
+    border: 1px solid grey;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .red {
+    background: red;
+    padding: 5px;
+  }
+  .green {
+    background: green;
+    padding: 5px;
+  }
+  .yellow {
+    background: yellow;
+    padding: 5px;
+  }
 }
