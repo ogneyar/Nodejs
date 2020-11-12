@@ -20,7 +20,7 @@ app.get('/test/:id', function(req, res){
     res.send('ID = ' + req.params.id);
 });
 app.get('/testy', function(req, res){
-    res.sendFile(__dirname + '/js/web/index.html');
+    res.sendFile(__dirname + '/js/web/home.html');
 });
 app.get('/hello', function(req, res){
     //res.sendFile(__dirname + '/views/hello.html');

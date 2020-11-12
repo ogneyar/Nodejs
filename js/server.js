@@ -7,10 +7,10 @@ var server = http.createServer(function(req, res) {
     res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
     //res.end('Hell Work<br>'+req.url);
     if (req.url=='/test/') {
-        res.end(fs.readFileSync('test/test.html', 'utf8'));
+        res.end(fs.readFileSync('web/test.html', 'utf8'));
     }else if (req.url=='/') {
 
-        fs.createReadStream(__dirname + '/web/index.html').pipe(res);
+        fs.createReadStream(__dirname + '/web/home.html').pipe(res);
 
     }else res.end(fs.readFileSync('errors/404.html', 'utf8'));
 });

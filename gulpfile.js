@@ -5,7 +5,6 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var nodemon = require('gulp-nodemon');
 
-
 function sass_converter(cb) {        
     gulp.src('./scss/*.scss')
         .pipe(sourcemaps.init())
@@ -26,7 +25,6 @@ function sass_converter(cb) {
         .pipe(gulp.dest('./public/css/'));        
     cb();
 }
-
 function watchSass() {
     gulp.watch('./scss/**/*', sass_converter);
 }
@@ -40,9 +38,7 @@ function nodeM(done) {
 		done: done
 	});
 }
-
 gulp.task('default', gulp.parallel(nodeM, watchSass));
-
 
 /*
 function defaultTask(cb) {    
