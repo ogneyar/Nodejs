@@ -2,9 +2,9 @@
   font-family: sans-serif;
   border: 1px solid #eee;
   border-radius: 2px;
-  padding: 20px 30px;
+  padding: 10px 15px;
   margin-top: 1em;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   user-select: none;
   overflow-x: auto;
 
@@ -25,4 +25,9 @@
     background: yellow;
     padding: 5px;
   }
+}
+
+#header li {
+  display: inline;
+  background: rgb(104, 61, 61);
 }

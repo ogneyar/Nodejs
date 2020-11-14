@@ -11,36 +11,44 @@
     <%- include("blocks/header") %>
 
 	<div id="hello-vue" class="demo">
-	  {{ message }}
+	  	{{ message }}
 	</div>
 	
 	<hr>
 	
 	<div id="app" class="demo">
 	
-	  <span @mouseover="changeText">Наведи на меня</span>&nbsp;
-	  <span @click="changeTextBack">Нажми на меня</span>
-	  
-	  <br><br>
-	  
-	  <p>{{ title }}</p>
+		<span @mouseover="changeText">Наведи на меня</span>&nbsp;
+		<span @click="changeTextBack">Нажми на меня</span>
+		
+		<br><br>
+		
+		<p>{{ title }}</p>
+		
+		<p :class="styleCSS">Цвет: {{ styleCSS }}</p>
+		<input type="text" @input="styleCSS = $event.target.value" />
+		
+		<br><br>
+		<hr>
+		<br>
 
-	  <p :class="styleCSS">Цвет: {{ styleCSS }}</p>
-	  <input type="text" @input="styleCSS = $event.target.value" />
+		<ul>
+			<li v-for="todo in todos">
+			{{ todo.text }}
+			</li>
+		</ul>
 
-	  <ol>
-		<li v-for="todo in todos">
-		  {{ todo.text }}
-		</li>
-	  </ol>
+		<br>
+		<hr>
+		<br>
 
-	  <ol>
-		<todo-item
-		  v-for="item in groceryList"
-		  v-bind:todo="item"
-		  v-bind:key="item.id"
-		></todo-item>
-	  </ol>
+		<ol>
+			<todo-item
+			v-for="item in groceryList"
+			v-bind:todo="item"
+			v-bind:key="item.id"
+			></todo-item>
+		</ol>
 
 	</div>
 

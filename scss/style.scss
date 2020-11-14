@@ -31,13 +31,20 @@ body {
 		padding-top: 10px;
 		li {			
 			padding: 0 10px 10px 10px;
+			
 			a {
 				border: 0.7px solid grey;
-				padding: 4px 10px;
+				padding: 4px 8px;
 				border-radius: 5px;
 				background: silver;
 				color: white;
 			}
+		}
+	}
+	ol {
+		list-style: none;
+		li {			
+			padding: 0 10px 10px 10px;
 		}
 	}
 	
