@@ -1,40 +1,52 @@
-<link rel="stylesheet" href="/css/hello.min.css"> 
-<script src="https://unpkg.com/vue@next"></script>
-<script src="/reload/reload.js"></script>
+<!DOCTYPE html>
+<html lang="ru">
+<head>    
+	<title>Test page</title>
+	
+    <%- include("blocks/head") %>
+	
+</head>
+<body>
+   
+    <%- include("blocks/header") %>
 
-<div id="hello-vue" class="demo">
-  {{ message }}
-</div>
+	<div id="hello-vue" class="demo">
+	  {{ message }}
+	</div>
+	
+	<hr>
+	
+	<div id="app" class="demo">
+	
+	  <span @mouseover="changeText">Наведи на меня</span>&nbsp;
+	  <span @click="changeTextBack">Нажми на меня</span>
+	  
+	  <br><br>
+	  
+	  <p>{{ title }}</p>
 
-<div id="app" class="demo">
-  <span @mouseover="changeText">Наведи на меня</span>&nbsp;
-  <span @click="changeTextBack">Нажми на меня</span>
-  <p>{{ title }}</p>
+	  <p :class="styleCSS">Цвет: {{ styleCSS }}</p>
+	  <input type="text" @input="styleCSS = $event.target.value" />
 
-  <p :class="styleCSS">Цвет: {{ styleCSS }}</p>
-  <input type="text" @input="styleCSS = $event.target.value" />
+	  <ol>
+		<li v-for="todo in todos">
+		  {{ todo.text }}
+		</li>
+	  </ol>
 
-  <ol>
-    <li v-for="todo in todos">
-      {{ todo.text }}
-    </li>
-  </ol>
+	  <ol>
+		<todo-item
+		  v-for="item in groceryList"
+		  v-bind:todo="item"
+		  v-bind:key="item.id"
+		></todo-item>
+	  </ol>
 
-  <ol>
-    <!--
-      Now we provide each todo-item with the todo object
-      it's representing, so that its content can be dynamic.
-      We also need to provide each component with a "key",
-      which will be explained later.
-    -->
-    <todo-item
-      v-for="item in groceryList"
-      v-bind:todo="item"
-      v-bind:key="item.id"
-    ></todo-item>
-  </ol>
+	</div>
 
-</div>
-
-
-<script src="/js/hello.js"></script>
+	<script src="/js/hello.js"></script>
+		
+    <%- include("blocks/footer") %>
+    
+</body>
+</html>
