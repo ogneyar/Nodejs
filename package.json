@@ -6,15 +6,18 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "del": "^6.0.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-nodemon": "^2.5.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^2.0.0",
     "reload": "^3.1.1"
   },
   "scripts": {
