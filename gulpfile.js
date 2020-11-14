@@ -30,8 +30,8 @@ function sass_converter(cb) {
 }
 function js_converter(cb) {
     gulp.src('./js/*.js')
-        .pipe(uglify())
-		.pipe(gulp.dest('./public/js/'))
+        .pipe(gulp.dest('./public/js/'))
+        .pipe(uglify())		
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./public/js/'));
 	cb();
