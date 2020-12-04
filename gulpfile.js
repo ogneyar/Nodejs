@@ -79,3 +79,7 @@ function defaultTask(cb) {
 }  
 exports.default = defaultTask
 */
+
+// or 
+// exports.default = cb => cb();
+
