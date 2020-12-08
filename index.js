@@ -34,7 +34,7 @@ app.get('/diplom/shop', function(req, res){
     res.sendFile(__dirname + '/diplom/shop/shop.php');	
 });
 app.get('/diplom/admin', function(req, res){
-    res.sendFile(__dirname + '/diplom/shop/admin.php');	
+    res.sendFile(__dirname + '/diplom/admin/admin.php');	
 });
 
 
