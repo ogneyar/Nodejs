@@ -27,6 +27,17 @@ app.get('/hello', function(req, res){
 	res.render('hello');
 });
 
+app.get('/diplom', function(req, res){
+    res.sendFile(__dirname + '/diplom/index.html');	
+});
+app.get('/diplom/shop', function(req, res){
+    res.sendFile(__dirname + '/diplom/shop/shop.php');	
+});
+app.get('/diplom/admin', function(req, res){
+    res.sendFile(__dirname + '/diplom/shop/admin.php');	
+});
+
+
 var server = http.createServer(app);
 reload(app).then(function () {	
 	server.listen(port, () => console.log(`Starting my server on NodeJS: Listening on ${ port }`));
