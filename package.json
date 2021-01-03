@@ -17,11 +17,13 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify-es": "^2.0.0",
+    "mail": "^0.2.3",
+    "nodemailer": "^6.4.17",
     "reload": "^3.1.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test"
   },
   "license": "ISC"
 }
