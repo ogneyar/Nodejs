@@ -23,7 +23,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node test"
+    "start": "node index"
   },
   "license": "ISC"
 }
