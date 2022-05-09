@@ -1,4 +1,6 @@
 
+const fs = require('fs')
+
 const server = require('./my')
 require('./my/dotenv')
 
@@ -13,7 +15,14 @@ app.get('/', (req, res) => {
 })
 
 app.get('/random', (req, res) => {
-	res.end('cooool (:')
+	if (req.params) res.end('params ' + JSON.stringify(req.params))
+	else res.end('cooool (:')
+})
+
+app.get('/home', (req, res) => {
+	fs.readFile(__dirname + "/static/pages/home/index.html", (err, html) => {
+		res.end(html)
+	})
 })
 
 app.listen(PORT, () => {
