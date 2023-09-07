@@ -1,0 +1,3 @@
+
+// узнать ip компа
+ipconfig /all
