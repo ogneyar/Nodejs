@@ -3,8 +3,8 @@
 const url = require('url');
 const http = require('http');
 const fs = require('fs');
-const {SMTPServer} = require('smtp-server');
-const {MailParser} = require('mailparser');
+const { SMTPServer } = require('smtp-server');
+const { MailParser } = require('mailparser');
 const NodeMailer = require('nodemailer');
 const WebSocketServer = require('ws').Server;
 const Logger = require('./logger.js');
@@ -75,8 +75,8 @@ function webSocketServer(config_ = {}, logger) {
         port: 12321,
     }, config_);
 
-    const PORT = config.port;
-    let isFile = ! PORT.match(/^\d+$/);
+    const PORT = 12321;//config.port;
+    let isFile = false;//! PORT.match(/^\d+$/);
 
     if (isFile && fs.existsSync(PORT)) {
         fs.unlinkSync(PORT);

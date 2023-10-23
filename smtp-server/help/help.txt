@@ -1,0 +1,10 @@
+
+telnet 127.0.0.1 25
+
+EHLO [127.0.0.1]
+AUTH LOGIN bG9naW4K
+0JLQkNCoX9Cb0J7Qk9CY0J1f0J/QntCn0KLQq1/Qkl9CQVNFXzY0
+
+
+openssl s_client -starttls smtp -crlf -connect 127.0.0.1:25
+
